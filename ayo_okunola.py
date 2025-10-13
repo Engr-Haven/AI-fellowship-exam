@@ -1,13 +1,35 @@
+
 #Question 1 >>>
-#x = int(input())
-#y = int(input())
 
-#def calc():
- #   if x == int(input()):
-  #      print()
+def calc():
+    operator = input("Enter an operator (+, -, *, /) or type 'exit' to quit: ")
+   
+    if operator == "exit":
+        print("Thank you for using the calculator.")
+        return
+    
+    num1 = float(input("Enter the first number: "))
+    num2 = float(input("Enter the second number: "))
 
+    if operator == "+":
+        outcome = num1 + num2
+        print(f"The result of {num1} + {num2} is {outcome}")
+    elif operator == "-":
+        outcome = num1 - num2
+        print(f"The result of {num1} - {num2} is {outcome}")
+    elif operator == "*":
+        outcome = num1 * num2
+        print(f"The result of {num1} * {num2} is {outcome}")
+    elif operator == "/":
+        outcome = num1 / num2
+        print(f"The result of {num1} / {num2} is {outcome}")
+    else:
+        print(f"{operator} is not a valid operator.")
+
+calc()
 
 #Question 2 >>>
+
 while True:
     user_input = input("Enter a number (or type 'exit' to quit): ")
     if user_input == "exit":
